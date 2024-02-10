@@ -14,21 +14,12 @@ function testWebP() {
 // Проверка поддержки webP 
 testWebP();
 
-
-// const bgVideo = new Plyr('#bgVideo', {
-//     controls: [],
-//     muted: true,
-//     loop: { active: true }
-// });
-
 const player = new Plyr('#player', {
     controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'fullscreen'],
 });
 
 
-window.scrollTo({ top: 0 });
 window.addEventListener('load', (e) => {
-    console.log('load');
     document.body.classList.remove('unloaded')
     AOS.init({
         delay: 0, // values from 0 to 3000, with step 50ms
@@ -36,9 +27,7 @@ window.addEventListener('load', (e) => {
         easing: 'ease', // default easing for AOS animations
         once: true, // whether animation should happen only once - while scrolling down
     });
-    setTimeout(() => {
-        document.querySelector('#bgVideo').play()
-    }, 600);
+
 })
 
 
@@ -88,21 +77,6 @@ $("[data-toggle-elem]").click(function () {
 });
 
 
-// const halfSlider = new Swiper('.half-slider', {
-//     slidesPerView: 1,
-//     autoplay: {
-//         delay: 3000,
-//     },
-//     loop: 1,
-//     speed: 800,
-//     pagination: {
-//         el: '.swiper-pagination',
-//     },
-//     effect: 'fade',
-//     fadeEffect: {
-//         crossFade: true
-//     },
-// });
 
 
 
