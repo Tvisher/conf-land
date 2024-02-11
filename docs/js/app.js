@@ -19,18 +19,12 @@ const player = new Plyr('#player', {
 });
 
 
-window.addEventListener('load', (e) => {
-    document.body.classList.remove('unloaded')
-    AOS.init({
-        delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 1200, // values from 0 to 3000, with step 50ms
-        easing: 'ease', // default easing for AOS animations
-        once: true, // whether animation should happen only once - while scrolling down
-    });
-
-})
-
-
+AOS.init({
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 1200, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: true, // whether animation should happen only once - while scrolling down
+});
 
 const cardSliders = document.querySelectorAll('.cards-slider__container');
 cardSliders.forEach(sliderContainer => {
@@ -125,6 +119,7 @@ document.addEventListener('click', (e) => {
         mobileMenu.classList.remove('active');
         document.body.classList.remove('hidden');
         const linkId = target.closest('[data-site-link]').dataset.siteLink;
+        console.log(linkId);
         $("html, body").animate({ scrollTop: $(`${linkId}`).offset().top }, 500);
     }
 })
