@@ -4482,6 +4482,7 @@ button {
 }
 
 .white-section .copy-block__btn {
+  flex-shrink: 0;
   cursor: pointer;
   width: 25px;
   height: 25px;
@@ -5803,6 +5804,10 @@ button {
   .plyr__control--overlaid {
     width: 70px !important;
     height: 40px !important;
+  }
+
+  .white-section .white-section__copy-block {
+    padding: 13px;
   }
 }
 
